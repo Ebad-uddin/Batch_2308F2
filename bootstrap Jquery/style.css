@@ -1,8 +1,8 @@
-.row{
-    border: 3px solid #f00;
+.custom{
+    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: slategrey;
 }
-.col-md-2{
-    border: 2px solid #0f0;
-    height: 50px;
-    /* margin: 10px; */
+.custom-slider img{
+    height: 550px;
 }
