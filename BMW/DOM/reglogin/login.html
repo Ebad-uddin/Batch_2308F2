@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container" style="width: 800px; margin: 100px auto">
+      <form onsubmit="return login(), false">
+        <label for="email">Email</label>
+        <input type="email" id="email" />
+        <br />
+        <label for="password">Password</label>
+        <input type="password" id="password" />
+
+        <br /><button id="btn">Register</button>
+      </form>
+    </div>
+
+    <script>
+      function login() {
+        // getting user data using inputs
+        let email = document.getElementById("email").value;
+        let password = document.getElementById("password").value;
+
+        // getting the stored data from localStorage
+        let stored_data = localStorage.getItem("userdata");
+
+        // convert the JSON into object by using JSON method
+        let convert_to_obj = JSON.parse(stored_data);
+        // console.log(convert_to_obj);
+
+        // Extract the stored email and password from the object
+        let stored_email = convert_to_obj.Email;
+        let stored_pass = convert_to_obj.Pass;
+        // console.log(stored_email, stored_pass);
+
+        if(email == stored_email && password == stored_pass){
+            alert("login successful")
+            window.location.href = "home.html"
+        }else{
+            alert('Login failed')
+        }
+     }
+    </script>
+  </body>
+</html>

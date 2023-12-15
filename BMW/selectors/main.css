@@ -1,0 +1,94 @@
+/* *{
+    margin: 0;
+    padding: 0;
+} */
+
+.mylist{
+    display: flex;
+    justify-content: center;
+   
+}
+
+.mylist li{
+    list-style: none;
+    padding: 30px;
+}
+.mylist li a{
+    text-decoration: none;
+    font-size: 30px;
+    color: tomato;
+
+}
+
+/* group selector */
+
+th,tr,td{
+    border: 5px solid yellow;
+
+color: white;
+}
+table{
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+}
+tr,td, th{
+    padding: 20px;
+    border-radius: 50px;
+
+}
+table th{
+    background-color: rgb(203, 175, 230);
+}
+table td{
+    background-color: rgb(237, 134, 0);
+}
+.banner {
+    display: flex;
+    justify-content: center;
+}
+.container{
+ display: flex;   
+ justify-content: space-evenly;
+}
+.card{
+    margin-top: 30px;
+    
+    height: 350px;
+    width: 250px;
+    border: 2px solid #000;
+    margin-bottom: 50px;
+    text-align: center;
+    
+}
+.card img{
+    width: 250px;
+    height: 200px;
+
+}
+.card button{
+    background-color: red;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+.footer{
+    clear: both;
+    background-color: black;
+    color: white;
+    height: 100px;
+    text-align: center;
+    font-size: 30px;
+    padding-top: 20px;
+}
+
+/* Psuedo selectors */
+
+.mylist li a:hover{
+    color: rgb(166, 235, 235);
+    background-color: rgb(199, 131, 28);
+}
+
+
+
+

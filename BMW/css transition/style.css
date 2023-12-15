@@ -1,0 +1,33 @@
+.box{
+    height: 100px;
+    width: 100px;
+    background-color: aquamarine;
+     /* transition-property: border-radius  background-color; */
+     /* transition-delay: 2s; */
+     /* transition-timing-function:linear; */
+     transition: all;
+     transition-duration: 2s;
+}
+.box:hover{
+    border-radius: 200px;
+    height: 200px;
+    width: 200px;
+    background-color:brown
+}
+.box > p{
+    margin-left: 40px;
+
+     /* transition-property: border-radius  background-color; */
+     /* transition-delay: 2s; */
+     /* transition-timing-function:linear; */
+     transition: all;
+     transition-duration: 2s;
+}
+.box > p:hover{
+    color: white;
+    margin-top: 100px;
+    font-size: 60px;
+    height: 200px;
+    width: 200px;
+    /* background-color:brown */
+}

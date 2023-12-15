@@ -1,0 +1,38 @@
+*{
+    background-color: grey;
+    color: white;
+}
+.grid-container{
+    display: grid;
+    grid-template-areas: "header header header header" "navbar navbar navbar navbar" "sidebar1 sidebar1 sidebar2 sidebar2" "sidebar1 sidebar1 sidebar2 sidebar2";
+    gap:10px ;
+}
+.item1{
+    grid-area: header;
+    border: 1px solid #000;
+
+    text-align: center;
+}
+.item2{
+    grid-area: navbar;
+    border: 1px solid #000;
+    
+}
+/* Navbar Working */
+.item2 .list{
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+}
+.item3{
+    grid-area: sidebar1;
+    border: 1px solid #000;
+    
+}
+.item4{
+    grid-area: sidebar2;
+    border: 1px solid #000;
+    display: flex;
+    align-items: center;
+    padding: 30px;
+}
