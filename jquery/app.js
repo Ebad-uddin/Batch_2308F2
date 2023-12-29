@@ -61,12 +61,32 @@ let toggle = $('#toggle');
 
 
 
-let box1 = $('.box1').text()
-let box2 = $('.box2').html()
-let box3 = $('.box3')
-let fname = $('#fname').val();
-let attr = $('#fname').attr('placeholder');
-console.log(box1, box2, fname, attr);
+// let box1 = $('.box1').text()
+// let box2 = $('.box2').html()
+// let box3 = $('.box3')
+// let fname = $('#fname').val();
+// let attr = $('#fname').attr('placeholder');
+// console.log(box1, box2, fname, attr);
+
+
+let fname = $('#fname')
+let lname = $('#lname')
+let email = $('#email')
+let submit = $('#submit')
+let myform = $('#myform');
+let msg = $('#msg');
+
+submit.click(function(e){
+    e.preventDefault()
+    // console.log(fname.val(), lname.val(), email.val());
+    msg.html("FirstName : " + fname.val() + "<br>" + "LastName : " +   lname.val() +"<br>" + "Email : " + email.val());
+    myform.trigger("reset");
+
+})
+
+
+
+
 
 
 
