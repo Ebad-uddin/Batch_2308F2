@@ -74,13 +74,70 @@ let lname = $('#lname')
 let email = $('#email')
 let submit = $('#submit')
 let myform = $('#myform');
+let table = document.getElementById('tab');
 let msg = $('#msg');
 
+
+// blank array for object storage
+let user = JSON.parse(localStorage.getItem('userdata')) || []
+
+
+
 submit.click(function(e){
-    e.preventDefault()
+    e.preventDefault()  
+    let userobj = {
+        user_fname : fname.val(),
+        user_lname : lname.val(),
+        user_email : email.val(),
+    }
+    user.push(userobj);
+    let string = JSON.stringify(user);
+    console.log(user);
+    localStorage.setItem('userdata', string)
+    
+    user.forEach(value => {
+        table.innerHTML += `<tr>
+             <td>${value.user_fname}</td>
+             <td>${value.user_lname}</td>
+             <td>${value.user_email}</td>
+         </tr>`
+    });
+    
+
+
+
+
+
+
+
+
+
+    
     // console.log(fname.val(), lname.val(), email.val());
-    msg.html("FirstName : " + fname.val() + "<br>" + "LastName : " +   lname.val() +"<br>" + "Email : " + email.val());
-    myform.trigger("reset");
+    // msg.html("FirstName : " + fname.val() + "<br>" + "LastName : " +   lname.val() +"<br>" + "Email : " + email.val());
+    // myform.trigger("reset");
+//     table.html(`<tr>
+//     <td>${fname.val()}</td>
+//     <td>${lname.val()}</td>
+//     <td>${email.val()}</td>
+// </tr>`)
+
+
+// array methods
+
+// let arr = ['a', 'e', 'i', 'o'];
+// arr.push('u', 'ebad');
+// console.log(arr)
+// arr.pop();
+// console.log(arr)
+// // console.log(array)
+
+
+
+})
+
+
+
 
 })
 
@@ -88,9 +145,3 @@ submit.click(function(e){
 
 
 
-
-
-
-
-
-})
