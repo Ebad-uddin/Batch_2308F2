@@ -16,6 +16,23 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="./style.css" />
+    <!-- AOS animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- animate css -->
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+  <style>
+
+.my-element {
+  display: inline-block;
+  margin: 0 0.5rem;
+
+  animation: bounce; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 2s; /* don't forget to set a duration! */
+}
+  </style>
   </head>
   <body>
     <!-- navbar Start -->
@@ -160,8 +177,10 @@
     <div class="container">
       <div class="row">
         <h1 class="text-center my-5">Our Services</h1>
+        <h1 class="my-element animate__animated animate__rubberBand animate__delay-2s">An animated element</h1>
+
         <div class="col-md-6 col-lg-4 col-sm-12">
-          <div class="card" >
+          <div class="card " data-aos="flip-up" data-aos-duration="3000">
             <img src="../images/aptech slider 3.webp" class="card-img-top" alt="..." height="170px" width="100%"/>
             <div class="card-body">
               <h5 class="card-title">Card title</h5>
@@ -174,7 +193,7 @@
           </div>
         </div>
         <div class="col-md-6 col-lg-4 col-sm-12">
-          <div class="card" >
+          <div class="card"data-aos="zoom-in" data-aos-duration="3000" >
             <img src="../images/aptech slider.webp" class="card-img-top" alt="..." height="170px" width="100%"/>
             <div class="card-body">
               <h5 class="card-title">Card title</h5>
@@ -187,7 +206,7 @@
           </div>
         </div>
         <div class="col-md-6 col-lg-4 col-sm-12">
-          <div class="card" >
+          <div class="card" data-aos="zoom-in-up" data-aos-duration="3000" >
             <img src="../images/aptech slider2.jpg" class="card-img-top" alt="..." height="170px" width="100%"/>
             <div class="card-body">
               <h5 class="card-title">Card title</h5>
@@ -298,6 +317,13 @@
   <!-- Copyright -->
 </footer>
 <!-- Footer -->
+
+<!-- aos animation -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+  AOS.init();
+</script>
 
   </body>
 </html>
